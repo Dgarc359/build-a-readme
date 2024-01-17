@@ -3,8 +3,8 @@
         "transpile": "npx tsc",
         "prepublishOnly": "npm run transpile"
     },
-    "name": "@dvd/barm",
-    "version": "0.0.9",
+    "name": "build-a-readme",
+    "version": "0.0.10",
     "description": "Build a readme",
     "main": "out/main.js",
     "bin": {
