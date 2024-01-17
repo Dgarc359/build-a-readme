@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "transpile": "yarn tsc"
+        "transpile": "yarn tsc",
+        "prepublishOnly": "yarn transpile && yarn publish"
     },
     "name": "barm",
     "version": "0.0.1",
