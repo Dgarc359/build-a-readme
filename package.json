@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "dev": "npx tsc --watch",
         "transpile": "npx tsc",
         "prepublishOnly": "npm run transpile"
     },
