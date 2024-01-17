@@ -3,7 +3,7 @@
         "transpile": "npx tsc",
         "prepublishOnly": "npm run transpile"
     },
-    "name": "barm",
+    "name": "@dvd/barm",
     "version": "0.0.4",
     "description": "Build a readme",
     "main": "out/main.js",
