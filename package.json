@@ -1,10 +1,10 @@
 {
     "scripts": {
-        "transpile": "yarn tsc",
-        "prepublishOnly": "yarn transpile && yarn publish"
+        "transpile": "npx tsc",
+        "prepublishOnly": "npm transpile && npm publish"
     },
     "name": "barm",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Build a readme",
     "main": "out/main.js",
     "bin": {
