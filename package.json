@@ -3,7 +3,7 @@
         "dev": "npx tsc --watch",
         "transpile": "npx tsc",
         "prepublishOnly": "npm run transpile",
-        "postinstall": "npm run transpile"
+        "postinstall": "cd node_modules/build-a-readme && npm run transpile"
     },
     "name": "build-a-readme",
     "version": "0.0.12",
