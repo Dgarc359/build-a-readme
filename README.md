@@ -1,4 +1,4 @@
-This example project builds and deploys a npm.js package called 'build-a-readme'. This repository is a nice template to jump start an npm project combined with github actions.
+This example project builds and deploys a node.js binary called 'build-a-readme' which can be used with `npx barm` or `yarn barm` upon installation. This repository is a nice template to jump start a node.js project where you need to build a binary combined with github actions.
 
 > Your github actions will more than likely fail until you change the package name in your `package.json`
 
