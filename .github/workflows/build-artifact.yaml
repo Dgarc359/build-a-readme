@@ -15,11 +15,11 @@ jobs:
       - name: release
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          tag: ${{ github.ref }}
+          tag: ${{ github.ref_name }}
             #uses: actions/create-release@v1
         id: make_release
         run: |
           gh release create "$tag" \
             --repo="$GITHUB_REPOSITORY" \
-            --title="$GITHUB_REPOSITORY#*/} ${tag#v}" \
+            --title="${tag#v}" \
             --generate-notes

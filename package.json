@@ -5,7 +5,7 @@
         "prepublishOnly": "npm run transpile"
     },
     "name": "build-a-readme",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "description": "Build a readme",
     "main": "out/main.js",
     "bin": {
