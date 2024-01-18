@@ -1,0 +1,16 @@
+name: Publish Package to npmjs
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Setup .npmrc file to publish to npm
+      - run: yarn install --frozen-lockfile
+      - run: yarn tsc
+      - name: Archive js output
+        uses: actions/upload-artifact@v3
+        with:
+          name: js
+          path: out/*
