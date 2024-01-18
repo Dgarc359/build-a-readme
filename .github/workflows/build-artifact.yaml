@@ -36,5 +36,6 @@ jobs:
           upload_url: ${{ steps.make_release.outputs.upload_url }}
           asset_path: ./out
           asset_name: main.js
+          asset_content_type: text/js
         env:
           GITHUB_TOKEN: ${{ github.token }}
