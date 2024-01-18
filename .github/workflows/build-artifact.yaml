@@ -1,4 +1,4 @@
-name: Publish Package to npmjs
+name: Create js artifact
 on: push
 
 jobs:
@@ -13,4 +13,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: js
-          path: out/*
+          path: |
+            out/*
+            package.json
