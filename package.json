@@ -2,7 +2,8 @@
     "scripts": {
         "dev": "npx tsc --watch",
         "transpile": "npx tsc",
-        "prepublishOnly": "npm run transpile"
+        "prepublishOnly": "npm run transpile",
+        "postinstall": "npm run transpile"
     },
     "name": "build-a-readme",
     "version": "0.0.12",
