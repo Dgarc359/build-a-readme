@@ -2,7 +2,7 @@ This example project builds and deploys a node.js binary called 'build-a-readme'
 
 [Check out the deployed package](https://www.npmjs.com/package/build-a-readme)
 
-> Your github actions will more than likely fail until you change the package name in your `package.json`
+> ⚠️ Your github actions will more than likely fail until you change the package name in your `package.json`
 
 # Usage
 
@@ -16,7 +16,7 @@ modify the publish-to-npmjs.yaml file.
 
 
 # Example Project Development guide
-this dev guide is for the example project
+> ⚠️ This dev guide is for the example project
 
 Link your local version to a dummy client for testing
 ```bash
