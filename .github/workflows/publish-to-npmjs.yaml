@@ -3,13 +3,9 @@ on:
   push:
     tags:
       - "*"
+    branches:
+      - "main"
 jobs:
-  check-if-main-branch:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: don't publish
-        run: exit 0
   build:
     permissions: write-all
     runs-on: ubuntu-latest
