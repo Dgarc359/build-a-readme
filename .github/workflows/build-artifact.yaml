@@ -12,30 +12,14 @@ jobs:
       # Setup .npmrc file to publish to npm
       - run: yarn install --frozen-lockfile
       - run: yarn tsc
-      - name: Archive js output
-        uses: actions/upload-artifact@v3
-        with:
-          name: js
-          path: |
-            out/*
-            package.json
       - name: release
-        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          tag: ${{ github.ref }}
+            #uses: actions/create-release@v1
         id: make_release
-        with:
-          draft: false
-          prerelease: false
-          release_name: ${{ github.ref }}
-          tag_name: ${{ github.ref }}
-          body_path: CHANGELOG.md
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-      - name: upload artifact
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.make_release.outputs.upload_url }}
-          asset_path: ./out/main.js
-          asset_name: main.js
-          asset_content_type: text/js
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$tag" \
+            --repo="$GITHUB_REPOSITORY" \
+            --title="$GITHUB_REPOSITORY#*/} ${tag#v}" \
+            --generate-notes
