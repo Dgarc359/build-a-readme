@@ -8,8 +8,8 @@ dotenv.config();
 program
   .command("generate")
   .option("-cg, --contribution-guide <bool>")
-  .action(() => {
-    console.log("hello world");
+  .action((str, options) => {
+    console.log("hello world!!");
   });
 
 program.parse();

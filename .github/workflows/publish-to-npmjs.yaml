@@ -16,3 +16,8 @@ jobs:
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Archive js output
+        uses: actions/upload-artifact@v3
+        with:
+          name: js
+          path: out/*
