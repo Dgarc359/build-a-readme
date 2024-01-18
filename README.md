@@ -11,6 +11,3 @@ npm link
 # in a dummy consumer project
 npm link build-a-readme
 ```
-
-
-
