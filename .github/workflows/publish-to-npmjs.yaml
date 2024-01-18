@@ -3,12 +3,11 @@ on:
   push:
     tags:
       - "*"
-    branches:
-      - "main"
 jobs:
   build:
     permissions: write-all
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
       # Setup .npmrc file to publish to npm
